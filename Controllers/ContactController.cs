@@ -15,5 +15,13 @@ namespace Portfolio.Controllers
         {
             return View();
         }
-    }
+
+        [HttpPost]
+		[Route("contact/contactsubmit")]
+		public IActionResult contactsubmit(string Name, string Email, string Phone)
+		{
+            Console.WriteLine($"{Name} {Email} {Phone}");
+            return new EmptyResult();
+		}
+	}
 }
